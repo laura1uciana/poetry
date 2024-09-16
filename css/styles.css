@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: rgb(189, 0, 0);
+    background-color: rgba(212, 136, 209, 0.416);
+    text-shadow: 
+    0 0 5px #f7b9fe, /* Red glow */
+    0 0 10px #ecbedc, /* Stronger red glow */
+    0 0 20px #dec2db, /* Very strong red glow */
+    0 0 25px #f2daf2, /* Intense red glow */
+    0 0 30px #e3bee0; /* Maximum red glow */
+    overflow: hidden;
+}
+
+
+
+#image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure images do not interfere with user interactions */
+    z-index: 1; /* Lower z-index to be behind other content */
+}
+
+#image-container img {
+    position: absolute;
+    width: 130px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+
+#scroll-container {
+    position: relative; /* Required for child absolute positioning */
+    height: 100vh; /* Ensure the container covers the viewport height */
+    overflow: hidden; /* Hide overflowing content */
+    z-index: 2; /* Higher z-index to be in front of images */
+}
+
+#scroll-text {
+    position: relative;
+    z-index: 3; /* Higher z-index to be in front of images and container */
+    height: 100%;
+    text-align: left;
+    font-size: 3em;
+    letter-spacing: -2px;
+    transform: translateY(90%);
+    animation: my-animation 100s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+        transform: translateY(90%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
