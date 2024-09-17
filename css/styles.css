@@ -41,19 +41,19 @@ body {
 }
 
 #scroll-text {
-    position: relative;
+    position: absolute;
     z-index: 3; /* Higher z-index to be in front of images and container */
-    height: 100%;
+    min-height: 300%; /* Ensure enough height for animation */
     text-align: left;
     font-size: 3em;
     letter-spacing: -2px;
-    transform: translateY(90%);
-    animation: my-animation 100s linear infinite;
+    transform: translateY(20%);
+    animation: my-animation 300s linear infinite;
 }
 
 @keyframes my-animation {
     from {
-        transform: translateY(90%);
+        transform: translateY(20%);
     }
     to {
         transform: translateY(-100%);
