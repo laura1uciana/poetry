@@ -1,7 +1,7 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('image-container');
-    const imageUrl = 'images/kiss_PNG85751.png'; // Path to your image
+    const imageUrl = 'images/kiss_300px.png'; // Path to your image
     const numImages = 50; // Number of images to generate
 
     for (let i = 0; i < numImages; i++) {
